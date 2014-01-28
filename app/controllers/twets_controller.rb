@@ -26,7 +26,16 @@ class TwetsController < ApplicationController
   #
   #
   def create
+    #@users = User.all_except(current_user)
+    #@users.each do |user|
+    #  twet_params[:content].gsub!("@#{user.username}", link_to("@#{user.username}", user))
+    #end
+    
     @twet = current_user.twets.create(twet_params)
+    
+    
+    
+
     if @twet.valid?
       flash[:success] = "Your twet was shared"
       redirect_to :action => :index and return

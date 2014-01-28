@@ -7,7 +7,7 @@ Twetter::Application.routes.draw do
     resources :follows, :except => [:new, :edit, :show, :update]
     resources :twets, :except => [:new, :edit, :show, :update]
     root :to => 'follows#index', :as => :user_root
-    get ':username', to: 'twets#index', as: 'profile'
+    get ':username', to: 'profiles#show', as: 'profiles'
   end
 
   # You can have the root of your site routed with "root"
