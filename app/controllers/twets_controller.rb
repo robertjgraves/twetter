@@ -10,6 +10,7 @@ class TwetsController < ApplicationController
   #
   def index
     get_twets
+    @users = User.all
   end
 
   # POST /twets

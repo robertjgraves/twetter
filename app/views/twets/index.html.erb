@@ -16,7 +16,9 @@
         <%= link_to "@"+twet.user.username, twet.user.username, :class=> 'small text-muted pad-10 text-middle' %>
         <%= content_tag :small, twet.created_at.strftime("%b %-d"), :class => 'text-muted text-middle pull-right' %>
         <div class="clearfix"></div>
-        <%= content_tag :p, twet.content %>
+        
+          <%= content_tag :p, twet.content %>
+        
       </li>
       <li><hr></li>
       <% end -%>
